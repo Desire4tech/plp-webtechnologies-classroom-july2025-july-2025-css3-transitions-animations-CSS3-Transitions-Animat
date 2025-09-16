@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>My Personal Cookbook</h1>
+        <p>A collection of my favorite recipes, brought to life with interactive design.</p>
+    </header>
+
+    <main>
+        <section class="recipe-section" id="visuals-section">
+            <h2>Part 1: Thematic Visuals 🎨</h2>
+            <div class="recipe-card-container">
+                <div class="recipe-card ingredient-fade">
+                    <h3>Garlic Bread 🥖</h3>
+                    <p>A simple and delicious side dish.</p>
+                    <ul class="ingredient-list">
+                        <li>1 loaf of bread</li>
+                        <li>3 cloves garlic</li>
+                        <li>1/2 cup butter</li>
+                        <li>Parsley</li>
+                    </ul>
+                </div>
+                <div class="recipe-card thematic-animation">
+                    <h3>Pancakes 🥞</h3>
+                    <p>Fluffy morning goodness.</p>
+                    <div class="thematic-icon"></div>
+                </div>
+            </div>
+            <button class="recipe-button">Find More Recipes</button>
+        </section>
+
+        <hr>
+
+        <section class="recipe-section" id="logic-section">
+            <h2>Part 2: Logical Grouping 📚</h2>
+            <div class="logic-container">
+                <h3>Prep Time Calculator</h3>
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" value="Chocolate Chip Cookies">
+                <label for="prepTime">Prep Time (minutes):</label>
+                <input type="number" id="prepTime" value="15">
+                <label for="cookTime">Cook Time (minutes):</label>
+                <input type="number" id="cookTime" value="10">
+                <button id="calculateTotal">Calculate Total Time</button>
+                <p class="result-text">Total Time: <span id="totalTime"></span></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="recipe-section" id="interactive-section">
+            <h2>Part 3: Interactive Recipe 🎬</h2>
+            <div class="interactive-container">
+                <button id="startRecipeBtn">Start "My Favorite Chili" Recipe</button>
+                <div class="instruction-box" id="instructionBox">
+                    <div class="instruction-header">
+                        <span class="instruction-number">Step 1: </span>
+                        <span class="instruction-text">Chop the vegetables.</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <button id="nextStepBtn" class="hidden">Next Step</button>
+                <div class="pop-up" id="recipeCompletePopup">
+                    <p>Recipe Complete! Enjoy your meal. 🎉</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
