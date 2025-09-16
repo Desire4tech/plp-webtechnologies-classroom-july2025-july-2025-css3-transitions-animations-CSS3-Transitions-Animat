@@ -1,0 +1,158 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f4e3;
+    color: #4b3832;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #6a4a3c;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2d8b5;
+    margin: 40px 0;
+}
+
+/* Part 1: Visual Design with Thematic Consistency */
+.recipe-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.recipe-card {
+    background-color: #f5f5dc;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* CSS Transition for buttons */
+.recipe-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #a45a52;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.recipe-button:hover {
+    background-color: #8c4a45;
+    transform: translateY(-2px);
+}
+
+/* CSS Animation for ingredients (fades in) */
+.ingredient-fade .ingredient-list {
+    opacity: 0;
+    animation: fadeInList 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInList {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Continuous thematic animation */
+.thematic-animation .thematic-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f7b731;
+    border-radius: 50%;
+    margin: 10px auto 0;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(247, 183, 49, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(247, 183, 49, 0); }
+    100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(247, 183, 49, 0); }
+}
+
+/* Part 3: Combining Visuals with Logical Structure */
+.interactive-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instruction-box {
+    width: 80%;
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.instruction-box.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #dcdcdc;
+    border-radius: 5px;
+    margin-top: 15px;
+    height: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #81c784;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Pop-up/Modal Styling */
+.pop-up {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #66bb6a;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.pop-up.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
